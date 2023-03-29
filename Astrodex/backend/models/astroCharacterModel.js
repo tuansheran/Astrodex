@@ -30,6 +30,10 @@ const characterSchema = mongoose.Schema(
         longDescription:{
             type: String,
             required: true
+        },
+        image:{
+            type: String,
+            required: true
         }
     }
 )

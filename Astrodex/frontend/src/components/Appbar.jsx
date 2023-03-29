@@ -5,7 +5,7 @@ const Appbar = () => {
         <AppBar 
         sx={{
             bgcolor: "#242423",
-            borderRadius: 1
+            
         }}
         >
             <Toolbar>

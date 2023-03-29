@@ -1,5 +1,9 @@
 const express = require('express');
 const cors = require('cors');
+require('dotenv').config();
+
+
+const monogURI = process.env.DATABASE_ACESS
 
 const { default: mongoose } = require('mongoose');
 const app = express();
@@ -9,7 +13,7 @@ const Character = require('./models/astroCharacterModel')
 
 
 mongoose.
-connect('mongodb+srv://ashek2019127:sheran2002@astrodex.h0gt5k6.mongodb.net/?retryWrites=true&w=majority').
+connect(monogURI).
 then(()=>{
     console.log("Connected to db sucsesfully")
 }).catch((error)=>{
