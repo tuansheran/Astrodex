@@ -4,13 +4,13 @@ const Appbar = () => {
     return (
         <AppBar 
         sx={{
-            bgcolor: "#242423",
+            bgcolor: "#001540",
             
         }}
         >
             <Toolbar>
                 <Stack direction={"row"} flexGrow={1}>
-                    <Typography>LOGO-NAME</Typography>
+                    <Typography>ASTRODEX</Typography>
                 </Stack>
                 <Stack direction={"row"} justifyContent={"end"} flexDirection="row">
                     <Typography 
@@ -23,13 +23,13 @@ const Appbar = () => {
                     <Typography 
                     sx={{
                         m:3
-                    }}> ASTRO-HOME
+                    }}> ABOUT US
                     </Typography>
 
                     <Typography 
                     sx={{
                         m:3
-                        }}>PROFILE
+                        }}>DONATE
                     </Typography>
                 </Stack>
 

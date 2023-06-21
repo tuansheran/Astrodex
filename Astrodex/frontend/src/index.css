@@ -2,10 +2,11 @@
 body{
   font-family: 'Inter', sans-serif;
   font-family: 'Space Grotesk', sans-serif;
-  background-color: #02cab6;
+  background-color: #041120fb;
+  margin: 0%;
+  
   /* background-image: url("./assets/bgImg.png");
   background-size: cover;
   background-position: center; */
-  
 }
 

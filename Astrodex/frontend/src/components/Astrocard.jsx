@@ -1,22 +1,29 @@
 import { Card, CardMedia, CardContent, CardActions, Button, Typography } from '@mui/material';
 import AstroCreature from '../assets/testAstroCreature.jpg'
-import { useState } from 'react';
+import { ThemeProvider } from '@emotion/react';
+import { createTheme } from '@mui/material/styles';
+import { Link } from 'react-router-dom';
+
+const theme = createTheme({
+    palette: {
+      mode: 'dark',
+    },
+  });
 
 
 const Astrocard = (props) => {
     
-    const [alienName, setAlienName] = useState('')
-    const [alienImage, setAlienImage] = useState('')
-    const [alienDescription, setAlienDescription] = useState('')
-    
     return (
+        <ThemeProvider theme={theme}>
+        
         <Card
-            sx={{width: 350, height: 350}}
-        >
+            sx={{
+            width: 350, 
+            height: 350
+            }}>
             <CardMedia
-            sx={{height: 200}}
-            image={AstroCreature}
-            >
+                sx={{height: 200}}
+                image={AstroCreature}>
 
             </CardMedia>
 
@@ -30,10 +37,12 @@ const Astrocard = (props) => {
              </CardContent>
 
              <CardActions>
-                <Button size="small">View More</Button>
+                <Link to={`/astroprofile/${props.name}`}>
+                    <Button size="small">View More</Button>
+                </Link>
              </CardActions>
-
         </Card>
+    </ThemeProvider>
     );
 };
 
